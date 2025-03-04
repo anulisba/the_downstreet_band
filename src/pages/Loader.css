@@ -23,11 +23,11 @@
 .counter {
     display: flex;
     align-items: baseline;
-    color: #fff;
+    color: #a5a5a5;
     font-size: 9.5vw;
     /* Responsive font size */
-    font-family: 'Courier New', monospace;
-    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     height: 1em;
     line-height: 1;
 }
@@ -62,7 +62,8 @@
     margin-left: 0.15em;
     opacity: 1;
     align-self: center;
-    font-weight: 300;
+    font-weight: 700;
+    color: #a5a5a5;
     position: relative;
     top: -0.05em;
 }
@@ -76,8 +77,8 @@
     letter-spacing: 0.25em;
     text-transform: uppercase;
     opacity: 0.8;
-    font-family: 'Courier New', monospace;
-    font-weight: bolder;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
     animation: text-fade 1.8s ease-in-out infinite;
 }
 
