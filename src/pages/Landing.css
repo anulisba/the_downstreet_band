@@ -269,6 +269,7 @@ html {
     padding: 8px 12px;
     border-radius: 5px;
     z-index: 200;
+    align-items: center;
 }
 
 .artist-name {
@@ -281,11 +282,20 @@ html {
 .artist-role {
     font-size: 16px;
     font-weight: normal;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
 
-    opacity: 0.8;
 }
 
+.insta-icon {
 
+    fill: #d6d6d6;
+    width: 18px;
+
+}
 
 .image-container:hover .image-overlay {
     opacity: 0;

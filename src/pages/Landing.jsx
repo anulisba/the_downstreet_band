@@ -6,9 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import img1 from "../assets/images/WhatsApp Image 2025-02-24 at 10.54.09 PM.jpeg";
-import img2 from "../assets/images/1.jpg";
-import img3 from "../assets/images/WhatsApp Image 2025-02-24 at 10.54.09 PM.jpeg";
 import logo from '../assets/images/logo.png'
 import bg1 from '../assets/images/WhatsApp Image 2025-02-24 at 10.54.09 PM.jpeg';
 import bg2 from '../assets/images/bg2.jpeg';
@@ -33,6 +30,7 @@ import g9 from '../assets/images/g94.webp';
 import g10 from '../assets/images/g10.webp';
 import g11 from '../assets/images/g11.webp';
 import Popup from "./Popup";
+import insta from '../assets/images/instagram.png'
 export default function LandingPage() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -232,8 +230,17 @@ export default function LandingPage() {
                 >
                     {teamImages.map((img, index) => {
                         const isElevated = index === (activeIndex + 1) % teamImages.length;
-                        const artistNames = ["Abhishek Oomen", "Anix Samuel", "Paulwin seby", "Abhinanth Mohan", "Rahul G Nair", "Sunny Stephan"]; // Replace with actual names
+                        const artistNames = ["Abhishek Oommen", "Anix Samuel", "Paulwin Seby", "Abhinanth Mohan", "Rahul G Nair", "Sunny Stephan"];
                         const artistRoles = ["Drummer", "Violinist", "Keyboardist", "Singer", "Guitarist", "Guitarist"];
+                        const artistInstaLinks = [
+                            "https://www.instagram.com/abishekoommen?igsh=eDhmbW9sZnNiMHBr",
+                            "https://www.instagram.com/_hoo_lin_?igsh=MWFubTB3bmJybzQ0dQ==",
+                            "https://www.instagram.com/paulwin.seby?igsh=MTQ2MmNzc3k5Nzgycw==",
+                            "https://www.instagram.com/abhinanthmohan?igsh=MTdoYTB6Mmw5dTloeQ==",
+                            "https://www.instagram.com/rahul_g_nair_97?igsh=MWJsOWp1YzBveWc5cw==",
+                            "https://www.instagram.com/sunny_the_guitarist?igsh=b3Z6bW90dnF5Y3dl"
+                        ];
+
                         return (
                             <SwiperSlide key={index} style={{ top: "30px" }} className={`team-slide ${isElevated ? "elevated" : ""}`}>
                                 <div className="image-container">
@@ -241,12 +248,20 @@ export default function LandingPage() {
                                     <div className="image-overlay"></div>
                                     <div className="artist-info">
                                         <div className="artist-name">{artistNames[index]}</div>
-                                        <div className="artist-role">{artistRoles[index]}</div>
+                                        <div className="artist-role">
+                                            {artistRoles[index]}
+
+                                            <a href={artistInstaLinks[index]} className="social-link">
+                                                <svg className="insta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
+                                            </a>
+
+                                        </div>
                                     </div>
                                 </div>
                             </SwiperSlide>
                         );
                     })}
+
 
 
                 </Swiper>
@@ -332,7 +347,7 @@ export default function LandingPage() {
                             <a href="#" className="social-link">
                                 <svg className="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z" /></svg>
                             </a>
-                            <a href="#" className="social-link">
+                            <a href="https://www.instagram.com/the_downstreetband?utm_source=qr&igsh=MXc4ZjFvNTRrMzFjeg==" className="social-link">
                                 <svg className="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
                             </a>
                             <a href="#" className="social-link">
