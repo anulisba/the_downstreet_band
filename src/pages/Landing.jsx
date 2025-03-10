@@ -20,18 +20,18 @@ import t3 from '../assets/images/paulwin.jpeg';
 import t4 from '../assets/images/abinnath.jpeg';
 import t5 from '../assets/images/guitar.jpeg';
 import t6 from '../assets/images/guitar2.jpeg'
-import g0 from '../assets/images/g0.jpeg';
-import g1 from '../assets/images/g1.jpeg';
+import g0 from '../assets/images/g0.webp';
+import g1 from '../assets/images/g1.webp'
 import g2 from '../assets/images/g2.jpeg';
-import g3 from '../assets/images/g3.jpeg';
-import g4 from '../assets/images/g4.jpeg';
-import g5 from '../assets/images/g5.jpeg';
-import g6 from '../assets/images/g6.jpeg';
-import g7 from '../assets/images/g7.jpeg';
-import g8 from '../assets/images/g8.jpeg';
-import g9 from '../assets/images/g94.jpeg';
-import g10 from '../assets/images/g10.jpeg';
-import g11 from '../assets/images/g11.jpeg';
+import g3 from '../assets/images/g3.webp';
+import g4 from '../assets/images/g4.webp';
+import g5 from '../assets/images/g5.webp';
+import g6 from '../assets/images/g6.webp';
+import g7 from '../assets/images/g7.webp';
+import g8 from '../assets/images/g8.webp';
+import g9 from '../assets/images/g94.webp';
+import g10 from '../assets/images/g10.webp';
+import g11 from '../assets/images/g11.webp';
 import Popup from "./Popup";
 export default function LandingPage() {
     const [currentIndex, setCurrentIndex] = useState(0);
