@@ -7,6 +7,7 @@ const Popup = ({ onClose, onSubmit }) => {
         name: "",
         date: "",
         time: "",
+        location: "",
         details: ""
     });
 
@@ -16,7 +17,7 @@ const Popup = ({ onClose, onSubmit }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const message = `New Booking Enquiry from :%0aName: ${formData.name}%0aDate: ${formData.date}%0aTime: ${formData.time}%0aDetails: ${formData.details}`;
+        const message = `New Booking Enquiry from :%0aName: ${formData.name}%0aDate: ${formData.date}%0aTime: ${formData.time}%0aLocation: ${formData.location}%0aDetails: ${formData.details}`;
         window.open(`https://wa.me/7592830212?text=${message}`, "_blank");
         onClose();
     };
@@ -74,7 +75,16 @@ const Popup = ({ onClose, onSubmit }) => {
                             onChange={handleChange}
                         />
                     </div>
-
+                    <div className="form-group">
+                        <label>Location</label>
+                        <input
+                            type="text"
+                            name="location"
+                            required
+                            value={formData.location}
+                            onChange={handleChange}
+                        />
+                    </div>
                     <div className="form-group">
                         <label>Program Details:</label>
                         <textarea
