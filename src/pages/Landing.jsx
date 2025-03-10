@@ -354,7 +354,7 @@ export default function LandingPage() {
                             </li>
                             <li className="event-item">
                                 <span className="event-date">March 07</span>
-                                <span className="event-title">Naipunya College</span>
+                                <span className="event-title">Naipunya\Institue of Management and Information Thrissur</span>
                             </li>
 
                         </ul>
