@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Landing.css"; // Import the external CSS file
-import { FaArrowLeft, FaArrowRight, FaBars, FaTimes } from "react-icons/fa"; // Import icons for the hamburger menu
+import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for the hamburger menu
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -20,12 +20,26 @@ import t3 from '../assets/images/paulwin.jpeg';
 import t4 from '../assets/images/abinnath.jpeg';
 import t5 from '../assets/images/guitar.jpeg';
 import t6 from '../assets/images/guitar2.jpeg'
+import g0 from '../assets/images/g0.jpeg';
+import g1 from '../assets/images/g1.jpeg';
+import g2 from '../assets/images/g2.jpeg';
+import g3 from '../assets/images/g3.jpeg';
+import g4 from '../assets/images/g4.jpeg';
+import g5 from '../assets/images/g5.jpeg';
+import g6 from '../assets/images/g6.jpeg';
+import g7 from '../assets/images/g7.jpeg';
+import g8 from '../assets/images/g8.jpeg';
+import g9 from '../assets/images/g94.jpeg';
+import g10 from '../assets/images/g10.jpeg';
+import g11 from '../assets/images/g11.jpeg';
+import Popup from "./Popup";
 export default function LandingPage() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
     const teamImages = [t1, t2, t3, t4, t5, t6];
     const [index, setIndex] = useState(0);
     const [activeIndex, setActiveIndex] = useState(0);
+    const [showPopup, setShowPopup] = useState(false);
     // Auto-slide every 3 seconds
     useEffect(() => {
         const interval = setInterval(() => {
@@ -53,18 +67,18 @@ export default function LandingPage() {
 
     // Modify your galleryImages array (fix duplicate IDs first!)
     const galleryImages = [
-        { id: 1, width: 1, height: 1, img: img1 },
-        { id: 2, width: 1, height: 2, img: img2 },
-        { id: 3, width: 2, height: 1, img: img3 },
-        { id: 4, width: 1, height: 1, img: img1 },
-        { id: 5, width: 1, height: 1, img: img2 },
-        { id: 6, width: 1, height: 1, img: img3 },
-        { id: 7, width: 1, height: 1, img: img1 },
-        { id: 8, width: 1, height: 2, img: img2 },
-        { id: 9, width: 2, height: 1, img: img3 },
-        { id: 10, width: 1, height: 1, img: img1 },
-        { id: 11, width: 1, height: 1, img: img2 },
-        { id: 12, width: 1, height: 1, img: img3 },
+        { id: 1, width: 1, height: 1, img: g0 },
+        { id: 2, width: 1, height: 2, img: g1 },
+        { id: 3, width: 2, height: 1, img: g5 },
+        { id: 4, width: 1, height: 1, img: g2 },
+        { id: 5, width: 1, height: 1, img: g3 },
+        { id: 6, width: 1, height: 1, img: g4 },
+        { id: 7, width: 1, height: 1, img: g6 },
+        { id: 8, width: 1, height: 2, img: g7 },
+        { id: 9, width: 2, height: 1, img: g8 },
+        { id: 10, width: 1, height: 1, img: g9 },
+        { id: 11, width: 1, height: 1, img: g10 },
+        { id: 12, width: 1, height: 1, img: g11 },
     ];
 
     // Update your gallery-grid section
@@ -176,7 +190,20 @@ export default function LandingPage() {
                         <p>
                             Our journey began in small underground gigs, and now we perform at major music festivals, sharing our love for music with the world.
                         </p>
+
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="load-more-button"
+                            style={{ marginTop: "30px" }}
+                            onClick={() => setShowPopup(true)}
+                        >
+                            Book Now
+                        </motion.button>
+
+
                     </motion.div>
+
                 </div>
             </section>
             <section id="team" className="team-section">
@@ -205,17 +232,22 @@ export default function LandingPage() {
                 >
                     {teamImages.map((img, index) => {
                         const isElevated = index === (activeIndex + 1) % teamImages.length;
-
+                        const artistNames = ["Abhishek Oomen", "Anix Samuel", "Paulwin seby", "Abhinanth Mohan", "Rahul G Nair", "Sunny Stephan"]; // Replace with actual names
+                        const artistRoles = ["Drummer", "Violinist", "Keyboardist", "Singer", "Guitarist", "Guitarist"];
                         return (
                             <SwiperSlide key={index} style={{ top: "30px" }} className={`team-slide ${isElevated ? "elevated" : ""}`}>
                                 <div className="image-container">
                                     <img src={img} alt="Band Performing" />
                                     <div className="image-overlay"></div>
+                                    <div className="artist-info">
+                                        <div className="artist-name">{artistNames[index]}</div>
+                                        <div className="artist-role">{artistRoles[index]}</div>
+                                    </div>
                                 </div>
                             </SwiperSlide>
-
                         );
                     })}
+
 
                 </Swiper>
 
@@ -282,7 +314,7 @@ export default function LandingPage() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="cta-button"
-                            onClick={() => window.location.href = '#booking-form'} // Replace with your actual click handler
+                            onClick={() => setShowPopup(true)} // Replace with your actual click handler
                         >
                             Book Your Musical Experience Now
 
@@ -342,10 +374,13 @@ export default function LandingPage() {
 
                 <div className="footer-bottom">
                     <p className="copyright">&copy; {new Date().getFullYear()} The Down Street Band. All rights reserved.</p>
-                    <p className="copyright">Made With ❤️ Anu</p>
+
 
                 </div>
             </footer>
+            <AnimatePresence>
+                {showPopup && <Popup onClose={() => setShowPopup(false)} />}
+            </AnimatePresence>
         </div>
     );
 }

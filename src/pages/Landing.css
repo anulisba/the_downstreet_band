@@ -259,6 +259,34 @@ html {
     z-index: 100;
 }
 
+.artist-info {
+    position: absolute;
+    bottom: 30px;
+    left: 42%;
+    transform: translateX(-45%);
+    text-align: center;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.artist-name {
+    font-size: 18px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.artist-role {
+    font-size: 16px;
+    font-weight: normal;
+
+    opacity: 0.8;
+}
+
+
+
 .image-container:hover .image-overlay {
     opacity: 0;
 }

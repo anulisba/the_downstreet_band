@@ -1,0 +1,89 @@
+/* Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    color: rgb(0, 0, 0);
+}
+
+.popup-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.popup-h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: 'inter', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: #ffffff;
+    border: 1px solid #333;
+    color: rgb(0, 0, 0);
+
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.book-now-button {
+    background-color: transparent;
+    border: 2px solid #000;
+    padding: 15px 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #000;
+    /* Default text color */
+    display: block;
+    margin: 20px auto 0;
+    width: fit-content;
+}
+
+.book-now-button:hover {
+    background-color: #000;
+    color: #fff;
+}
