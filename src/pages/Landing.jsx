@@ -360,17 +360,18 @@ export default function LandingPage() {
                         <h3 className="footer-heading">Recent Events</h3>
                         <ul className="events-list">
                             <li className="event-item">
-                                <span className="event-date">March 01</span>
-                                <span className="event-title">Sahrdaya College of Engineering Kodakara</span>
+                                <span className="event-date">March 07</span>
+                                <span className="event-title">Naipunya Institue of Management and Information Thrissur</span>
                             </li>
                             <li className="event-item">
                                 <span className="event-date">March 05</span>
                                 <span className="event-title">Chirst College of Engineering Irinjalakkuda</span>
                             </li>
                             <li className="event-item">
-                                <span className="event-date">March 07</span>
-                                <span className="event-title">Naipunya\Institue of Management and Information Thrissur</span>
+                                <span className="event-date">March 01</span>
+                                <span className="event-title">Sahrdaya College of Engineering Kodakara</span>
                             </li>
+
 
                         </ul>
                     </div>

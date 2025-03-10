@@ -6,5 +6,5 @@ export default defineConfig({
     tailwindcss(),
     react(),
 
-  ], base: 'the_downstreet_band',
+  ], base: '/',
 })

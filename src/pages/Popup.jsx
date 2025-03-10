@@ -55,7 +55,7 @@ const Popup = ({ onClose, onSubmit }) => {
                     </div>
 
                     <div className="form-group">
-                        <label>Date:</label>
+                        <label>Event Date:</label>
                         <input
                             type="date"
                             name="date"
@@ -66,7 +66,7 @@ const Popup = ({ onClose, onSubmit }) => {
                     </div>
 
                     <div className="form-group">
-                        <label>Time:</label>
+                        <label>Event Time:</label>
                         <input
                             type="time"
                             name="time"
@@ -90,6 +90,7 @@ const Popup = ({ onClose, onSubmit }) => {
                         <textarea
                             name="details"
                             required
+
                             value={formData.details}
                             onChange={handleChange}
                         />
